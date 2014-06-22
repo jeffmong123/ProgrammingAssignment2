@@ -4,10 +4,10 @@
 ## makeCacheMatrix function creates a special matrix object to cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-  s <- NULL
+  s <- matrix()
   set <- function(y) {
     x <<- y  	## Set the value of the matrix
-    s <<- NULL
+    s <<- matrix()  ## Set the empty matrix
   }
   get <- function() x	## Get the value of the matrix
   setsolve <- function(solve) s <<- solve		## Set the value of the solve
